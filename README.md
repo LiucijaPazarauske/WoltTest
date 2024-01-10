@@ -1,7 +1,7 @@
 # QA INTERNSHIP TECHNICAL TASK
 
 ## Introduction
-This is a submission of completed task for QA Internship selection at Present Connection. Below you will find my take on writing a test using Cypress project, to choose and order food on Wolt.com and to deliver it to Kauno Dokas office. 
+This is a submission of completed task for QA Internship selection process at Present Connection. Below you will find my take on writing a test using Cypress project, to choose and order food on Wolt.com and to deliver it to Kauno Dokas office. 
 
 ## Tools and setup
     - The test was completed using Visual Studio Code and Cypress. 
