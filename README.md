@@ -1,13 +1,16 @@
-QA INTERNSHIP TECHNICAL TASK
-Introduction
-This is a submission of completed task for QA Internship at Present Connection. Below you will find my take on writing a test using Cypress project, to choose and order food on Wolt.com and to deliver it to Kauno Dokas office.
+# QA INTERNSHIP TECHNICAL TASK
 
-Tools and setup
-- The test was completed using Visual Studio Code and Cypress. 
-- The object of the test is Wolt.com website and not registered user with email address theand33@armyspy.com .
-Code and explanation
-The test started by opening the website and accepting optional cookies. Then I used location search window to find restaurants near Kauno Dokas and chose 'Burger' category. Since the window does not show full list of restaurants and it changes quite often, I used force: true assertion to select restaurant 'Pelėdinė'. Because of the same reasons, I used force: true assertion again to select 'Gringo burgeris' and add it to cart. Then I made sure the burger is in the cart and went to checkout. I was asked to login and at this point my test ended because I didn't have demo details for registered user.
+## Introduction
+This is a submission of completed task for QA Internship selection process at Present Connection. Below you will find my take on writing a test using Cypress project, to choose and order food on Wolt.com and to deliver it to Kauno Dokas office. 
 
+## Tools and setup
+    - The test was completed using Visual Studio Code and Cypress. 
+    - The object of the test is Wolt.com website and not registered user with email address theand33@armyspy.com .
+
+## Code and explanation
+The test started by opening the website and accepting optional cookies. Then I used location search window to find restaurants near Kauno Dokas and chose 'Burger' category. Since the window does not show full list of restaurants and it changes quite often, I used _force: true_ assertion to select restaurant 'Pelėdinė'. Because of the same reasons, I used _force: true_ assertion again to select 'Gringo burgeris' and add it to cart. Then I made sure the burger is in the cart and went to checkout. I was asked to login and at this point my test ended because I didn't have demo details for registered user.
+
+```javascript
      describe('Wolt maisto užsakymas', () => {
     it('Užsakymas iš Pelėdinės', () => {
         cy.visit('https://wolt.com/en/ltu')
@@ -25,5 +28,6 @@ The test started by opening the website and accepting optional cookies. Then I u
             .get('.sc-f40b8d6a-8').click({force: true})
     })
 })
-Conclusions
-Testing Wolt.com website might be a challenging task because it is very dynamic and depending on the time of day (is the restaurant accepting orders). However some challenges can be solved with force: true assertion. Also, it is best to use for the test the demo registered user account to go through as much as possible steps.
+```
+## Conclusions
+Testing Wolt.com website might be a challenging task because it is very dynamic and depending on the time of day (is the restaurant accepting orders). However some challenges can be solved with _force: true_ assertion. Also, it is best to use for the test the demo registered user account to go through as much as possible steps.
